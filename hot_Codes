@@ -1,4 +1,5 @@
 //// kill woking pid 
 netstat -ano | findstr :<PORT>
 taskkill /PID <PID> /F
-
+//// git hub
+ git fsck --lost-found      //  hayat kurtarır... resetlediğin commitleri getirir...
