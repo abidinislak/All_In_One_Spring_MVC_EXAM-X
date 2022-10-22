@@ -1,0 +1,187 @@
+1)  How many lines of the following code contain compiler errors?
+
+
+	       int var;
+        double public; 
+        double $01234;
+        String *foo;
+        int 3DPointClass; /
+        boolean _score;
+        byte hollywood@vine; 
+        char __SStillOkbutKnotsonice$;
+        short _; 
+
+
+A)  3
+B)  4
+C)  5
+D)  6
+E)  7
+
+
+ANSWER C
+
+
+
+2)    What is the output of the following code?
+
+
+ 	     	int mont =4;
+    		int optionMonth=4;
+
+   	  	 switch (mont){
+                    case 01:
+                    System.out.println("It is January");
+                    break;
+                    case 8:
+                    System.out.println("Summur mounth");break;
+                    case optionMonth :
+                    System.out.println("Spring season");break;
+
+                    default:
+                    System.out.println("None of Above");break;
+
+
+
+
+A)  It is January 
+B)  It is January 
+    Spring season
+C)  Spring season
+D)  None of Above
+E)  The code does not compile
+F)  A runtime exception is thrown. 
+
+
+ANSWER     E
+
+
+
+
+3)     What is the output of the following code?
+
+
+
+        var date = LocalDate.of(2022, 10, 30);
+        date.plusDays(2);
+        date.plusMinutes(60*60*24);
+        System.out.println(date.getYear() + " " + date.getMonth()
+                + " " + date.getDayOfMonth());
+
+
+A) 2022 OCTOBER 30 
+B) 2022 NOVEMBER 1
+C) 2022 NOVEMBER 2
+D) None of Above
+E) The code does not compile
+F) A runtime exception is thrown. 
+
+
+ANSWER  E
+
+4)  Which of the following are valid lambda expressions? (Choose all that apply.)
+
+ 
+A) (p1,p2) -> {  System.out.println("Valid Expression");  
+} 
+B) () -> {  
+// Some coding
+} 
+C) (Bird b, var v) -> 5
+D) (a,b,c) -> {int b = 3; return 2;}
+E) () -> {int i;}
+F) (a,b) -> new RuntimeException() 
+
+
+
+ANSWERS    A-B-E-F
+
+
+
+5) The ___ keyword is used to guarantee that access to data within memory is consistent. 
+
+
+A) transient
+B) final
+C) volatile
+D) thread
+E) static
+
+
+ANSWER  C
+
+
+6)  Which option lists all modifiers corretly that cannot be used with the word "abstract"?
+
+A) private,final,protected
+B) private,default
+C) final
+D) final,native
+E) protedted,final,default
+
+
+
+ANSWER  A
+
+7) Which annotation can  added to main  application class  to use Auditing in Spring?
+
+
+
+
+A) @Auditing
+B) @SpringJpaAuditing
+C) @SpringAuditing
+D) @EnableJpaAuditing
+-
+
+
+ ANSWER   D
+ 
+ 
+ 
+ 
+ 
+ 
+8 ) Which option is define Cascade type of related entity ((Choose all that correct.)
+
+A) ALL
+B) DELETE
+C) REMOVE
+D) NONE
+E) DETACH
+F) REFRESH
+G) NEVER
+H) PERSIST
+
+
+ANSWERS  A-C-E-F-H
+
+
+
+
+9 )   Which of the following property can be used to define custom port  inside SpringBoot web applications ?
+
+
+
+
+A) server.port=8081
+B) port=8081
+C) custom.port=8081
+D) server.custom.port=8081
+E) spring.default.port=8081
+
+
+ANSWER   A
+
+
+
+
+10 )   What is the default FETCH type considered inside a One to Many relationship ?
+
+
+A) FetchType.LAZY
+B) FetchType.EAGER
+C) FetchType.ALL
+D) None Of Above
+
+ANSWER    A
