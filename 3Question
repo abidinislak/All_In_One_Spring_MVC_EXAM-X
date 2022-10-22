@@ -29,3 +29,148 @@ E )   TypeOfAnimal
 F )   Snake
 
 ANSWER     :              A  - C - D
+
+
+
+//// 2nd turn of 3 questions.....
+
+
+
+
+1)	  What is the output of the following code?
+
+class Vehicle {
+ public	String name;
+
+public String getName() {	return name; }
+
+public void setName(String name) { this.name = name; }
+}
+@Configuration
+public class Config {	
+	@Bean
+	Vehicle vehicle1() {		
+		var veh=new Vehicle();
+		veh.setName("Honda");
+		return veh;
+	}
+	
+	@Bean
+	Vehicle vehicle2() {
+		
+		var veh2=new Vehicle();
+		veh2.setName("Volvo");
+		return veh2;
+	}
+
+public static  void main(String ...arg ) {		
+		var context=new AnnotationConfigApplicationContext(Config.class);
+		Vehicle veh=context.getBean(Vehicle.class);
+		System.out.println(veh.getName());
+			}
+}
+
+
+
+
+A )     com.example.config.Vehicle@7714e963
+B)     Honda
+C)     Honda Volvo
+D)     Honda 
+         Volvo
+E)    It throws     NoUniqueBeanDefinitionException
+
+
+
+
+ANSWER 		E
+
+
+
+
+
+
+
+
+
+
+
+
+
+2)	Which of the following can be inserted into the blank to create a date of October 22, 2022?
+import java.time.LocalDate;
+public class TestDate {
+		public static  void main(String ...arg ) {
+		
+		LocalDate date =_________
+  	} }
+
+
+
+A )    new LocalDate(2022, 5, 21);
+B)     new LocalDate(22, 10, 2022);
+C)     LocalDate.of(22, 10, 2022);
+D)     LocalDate.of(2022, 10, 22);
+E)      LocalDate.now();
+
+
+
+ANSWER       D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3)	    What is the output of the following code?
+public abstract class Animal {	
+	public abstract void makenoise(); 
+}
+public class Dog extends Animal {
+	public void makenoise() {
+				System.out.println("Make Dog Noise...");
+}}
+
+public class GoldenRetriever  extends Dog{	
+	public void makenoise() {	
+super.makenoise();			
+			System.out.println("Make Golden Retriever Noise");
+	}
+	public static void main(String ... arg) {		
+			Dog dog=new GoldenRetriever();
+			dog.makenoise();			
+}}
+
+
+
+A )    Make Dog Noise...
+B)     Make Golden Retriever Noise
+C)     Make Dog Noise...
+     Make Golden Retriever Noise
+D)     throw    java.lang.ClassCastException
+
+
+ANSWER        C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
