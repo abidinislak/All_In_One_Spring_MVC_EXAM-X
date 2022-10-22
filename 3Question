@@ -1,0 +1,31 @@
+1 )   Which  annotation in Spring is using  to map either query parameters or form data ?
+A )   @RequestParam
+B)     @PostParam
+C)      @PathVariable
+D)      @RequestMap
+  ANSWER    :       A 
+
+
+ 2 )   Which of the following interface is the extended by  CrudRepository   inside Spring Data ?
+  A )  PagingAndSortingRepository
+B)   JpaRepository 
+C)   Repository
+D)   None of above 
+ANSWER     :        C
+
+
+3 )     Assuming the following declarations  in the Animal.java file, which successfully compile? (Choose all that apply.)
+public interface Animal {}
+public class Bird{}
+class Lion{}
+interface animal{}
+public enum TypeOfAnimal{}
+final abstract class Snake{}
+A )  Animal 
+B)  Bird
+C)   Lion
+D)   animal
+E )   TypeOfAnimal
+F )   Snake
+
+ANSWER     :              A  - C - D
