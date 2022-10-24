@@ -1,7 +1,5 @@
 1)  How many lines of the following code contain compiler errors?
-
-
-	       int var;
+       int var;
         double public; 
         double $01234;
         String *foo;
@@ -10,22 +8,16 @@
         byte hollywood@vine; 
         char __SStillOkbutKnotsonice$;
         short _; 
-
-
 A)  3
 B)  4
 C)  5
 D)  6
 E)  7
-
-
 ANSWER C
 
 
 
 2)    What is the output of the following code?
-
-
  	     	int mont =4;
     		int optionMonth=4;
 
@@ -41,9 +33,6 @@ ANSWER C
                     default:
                     System.out.println("None of Above");break;
 
-
-
-
 A)  It is January 
 B)  It is January 
     Spring season
@@ -51,37 +40,27 @@ C)  Spring season
 D)  None of Above
 E)  The code does not compile
 F)  A runtime exception is thrown. 
-
-
 ANSWER     E
 
 
 
 
 3)     What is the output of the following code?
-
-
-
         var date = LocalDate.of(2022, 10, 30);
         date.plusDays(2);
         date.plusMinutes(60*60*24);
         System.out.println(date.getYear() + " " + date.getMonth()
                 + " " + date.getDayOfMonth());
-
-
 A) 2022 OCTOBER 30 
 B) 2022 NOVEMBER 1
 C) 2022 NOVEMBER 2
 D) None of Above
 E) The code does not compile
 F) A runtime exception is thrown. 
-
-
 ANSWER  E
 
-4)  Which of the following are valid lambda expressions? (Choose all that apply.)
 
- 
+4)  Which of the following are valid lambda expressions? (Choose all that apply.)
 A) (p1,p2) -> {  System.out.println("Valid Expression");  
 } 
 B) () -> {  
@@ -91,59 +70,37 @@ C) (Bird b, var v) -> 5
 D) (a,b,c) -> {int b = 3; return 2;}
 E) () -> {int i;}
 F) (a,b) -> new RuntimeException() 
-
-
-
 ANSWERS    A-B-E-F
 
 
 
 5) The ___ keyword is used to guarantee that access to data within memory is consistent. 
-
-
 A) transient
 B) final
 C) volatile
 D) thread
 E) static
-
-
 ANSWER  C
 
 
 6)  Which option lists all modifiers corretly that cannot be used with the word "abstract"?
-
 A) private,final,protected
 B) private,default
 C) final
 D) final,native
 E) protedted,final,default
-
-
-
 ANSWER  A
 
+
 7) Which annotation can  added to main  application class  to use Auditing in Spring?
-
-
-
-
 A) @Auditing
 B) @SpringJpaAuditing
 C) @SpringAuditing
 D) @EnableJpaAuditing
--
-
-
  ANSWER   D
  
  
- 
- 
- 
- 
 8 ) Which option is define Cascade type of related entity ((Choose all that correct.)
-
 A) ALL
 B) DELETE
 C) REMOVE
@@ -152,36 +109,148 @@ E) DETACH
 F) REFRESH
 G) NEVER
 H) PERSIST
-
-
 ANSWERS  A-C-E-F-H
 
 
-
-
 9 )   Which of the following property can be used to define custom port  inside SpringBoot web applications ?
-
-
-
-
 A) server.port=8081
 B) port=8081
 C) custom.port=8081
 D) server.custom.port=8081
 E) spring.default.port=8081
-
-
 ANSWER   A
 
 
 
 
 10 )   What is the default FETCH type considered inside a One to Many relationship ?
-
-
-A) FetchType.LAZY
+ 
+ A) FetchType.LAZY
 B) FetchType.EAGER
 C) FetchType.ALL
 D) None Of Above
-
 ANSWER    A
+ 
+ 
+ 
+ 
+ 1 )   Which  annotation in Spring is using  to map either query parameters or form data ?
+A )   @RequestParam
+B)     @PostParam
+C)      @PathVariable
+D)      @RequestMap
+  ANSWER    :       A 
+
+
+ 2 )   Which of the following interface is the extended by  CrudRepository   inside Spring Data ?
+  A )  PagingAndSortingRepository
+B)   JpaRepository 
+C)   Repository
+D)   None of above 
+ANSWER     :        C
+
+
+3 )     Assuming the following declarations  in the Animal.java file, which successfully compile? (Choose all that apply.)
+public interface Animal {}
+public class Bird{}
+class Lion{}
+interface animal{}
+public enum TypeOfAnimal{}
+final abstract class Snake{}
+A )  Animal 
+B)  Bird
+C)   Lion
+D)   animal
+E )   TypeOfAnimal
+F )   Snake
+
+ANSWER     :              A  - C - D
+
+
+
+//// 2nd turn of 3 questions.....
+
+
+1)	  What is the output of the following code?
+class Vehicle {
+ public	String name;
+
+public String getName() {	return name; }
+
+public void setName(String name) { this.name = name; }
+}
+@Configuration
+public class Config {	
+	@Bean
+	Vehicle vehicle1() {		
+		var veh=new Vehicle();
+		veh.setName("Honda");
+		return veh;
+	}
+	
+	@Bean
+	Vehicle vehicle2() {
+		
+		var veh2=new Vehicle();
+		veh2.setName("Volvo");
+		return veh2;
+	}
+
+public static  void main(String ...arg ) {		
+		var context=new AnnotationConfigApplicationContext(Config.class);
+		Vehicle veh=context.getBean(Vehicle.class);
+		System.out.println(veh.getName());
+			}
+}
+
+A )     com.example.config.Vehicle@7714e963
+B)     Honda
+C)     Honda Volvo
+D)     Honda 
+         Volvo
+E)    It throws     NoUniqueBeanDefinitionException
+ANSWER 		E
+
+
+
+2)	Which of the following can be inserted into the blank to create a date of October 22, 2022?
+import java.time.LocalDate;
+public class TestDate {
+		public static  void main(String ...arg ) {
+		
+		LocalDate date =_________
+  	} }
+
+A )    new LocalDate(2022, 5, 21);
+B)     new LocalDate(22, 10, 2022);
+C)     LocalDate.of(22, 10, 2022);
+D)     LocalDate.of(2022, 10, 22);
+E)      LocalDate.now();
+ANSWER       D
+
+
+3)	    What is the output of the following code?
+public abstract class Animal {	
+	public abstract void makenoise(); 
+}
+public class Dog extends Animal {
+	public void makenoise() {
+				System.out.println("Make Dog Noise...");
+}}
+
+public class GoldenRetriever  extends Dog{	
+	public void makenoise() {	
+super.makenoise();			
+			System.out.println("Make Golden Retriever Noise");
+	}
+	public static void main(String ... arg) {		
+			Dog dog=new GoldenRetriever();
+			dog.makenoise();			
+}}
+
+A )    Make Dog Noise...
+B)     Make Golden Retriever Noise
+C)     Make Dog Noise...
+     Make Golden Retriever Noise
+D)     throw    java.lang.ClassCastException
+ANSWER        C
