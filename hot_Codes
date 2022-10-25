@@ -3,3 +3,4 @@ netstat -ano | findstr :<PORT>
 taskkill /PID <PID> /F
 //// git hub
  git fsck --lost-found      //  hayat kurtarır... resetlediğin commitleri getirir...
+git aliis set     -->>   C:\Program Files\Git\etc\profile.d    -->>>< alias sakla='git archive -o ../asd.zip @'
