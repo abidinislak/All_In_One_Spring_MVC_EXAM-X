@@ -33,9 +33,10 @@ public static void main(String[] args) {
 A)    null:null
 B)    100:null
 C)    100:1
-D)    throw java.lang.NullPointerException
-E)    throw java.lang.StringIndexOutOfBoundsException
-ANSWER   : E
+D)    Null
+E)    throw java.lang.NullPointerException
+F)    throw java.lang.StringIndexOutOfBoundsException
+ANSWER   : F
 
 
 
