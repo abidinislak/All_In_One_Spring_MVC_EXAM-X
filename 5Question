@@ -19,6 +19,8 @@ H)    public  static  void    main(String ... args)
 ANSWER  : B-F-H
 
 
+
+
 TOPIC :   String & StringBuilder Class
 2 )  What is the output of the following code?
 
@@ -34,6 +36,11 @@ C)    100:1
 D)    throw java.lang.NullPointerException
 E)    throw java.lang.StringIndexOutOfBoundsException
 ANSWER   : E
+
+
+
+
+
 
 TOPIC :   String & StringBuilder Class
 3)    What is the output of the following code?
@@ -53,6 +60,9 @@ B)    [test test test]
 C)    [Test, test, Test]
 D)    [test, Test, test]
 ANSWER   : E
+
+
+
 
 
 TOPIC : Method Creation
@@ -83,14 +93,15 @@ C)    1 2
 D)    1
       2
 E)    Infinite loop
-
 F)    The code does not compile
 ANSWER   : F
 
 
-TOPIC :  Static keyword
 
+
+TOPIC :  Static keyword
 5)   What is the output of the following code?
+
 public class Test {
     private static int counter=0;
     public static void main(String[] args) {
@@ -103,7 +114,6 @@ public class Test {
         System.out.print(counter);
     }
 }
-
 
 A)    0000
 B)    0101    
