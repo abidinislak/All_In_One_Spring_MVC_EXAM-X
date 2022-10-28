@@ -1,6 +1,4 @@
 TOPIC :   Writing a main() Method
-
-
 1 )  which options, if used to replace /*INSERT*/, will print "Hello World" on to the console? (Chosee all that apply). 
 
 public class Test {
@@ -10,7 +8,6 @@ public class Test {
      }
 }
 
-
 A)    public  static abstract void    main(String [] args)
 B)    public  static  void    main(String test [] )
 C)    static void    main(String [] args)
@@ -19,13 +16,10 @@ E)    public  static void    Main(String  [] args)
 F)    public  static  void    main(String  [] Test)
 G)    public   void    main(String  [] args)
 H)    public  static  void    main(String ... args)
-
-
-
 ANSWER  : B-F-H
 
 
-
+TOPIC :   String & StringBuilder Class
 2 )  What is the output of the following code?
 
 public static void main(String[] args) {
@@ -39,8 +33,30 @@ B)    100:null
 C)    100:1
 D)    throw java.lang.NullPointerException
 E)    throw java.lang.StringIndexOutOfBoundsException
-
 ANSWER   : E
+
+TOPIC :   String & StringBuilder Class
+3)    What is the output of the following code?
+
+  public static void main(String[] args) {
+        String s = new String("test");
+        List<String> list = new ArrayList<>();
+        s.replace("t", "T");
+        list.add(s);
+        list.add(new String("test"));
+        list.add(s);
+        System.out.println(list);
+    }
+
+A)    [Test Test Test]
+B)    [test test test]
+C)    [Test, test, Test]
+D)    [test, Test, test]
+ANSWER   : E
+
+
+
+
 
 
 
