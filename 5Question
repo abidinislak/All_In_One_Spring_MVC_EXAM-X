@@ -55,8 +55,37 @@ D)    [test, Test, test]
 ANSWER   : E
 
 
+TOPIC : Method Creation
+4)   What is the output of the following code?
 
+public class Test {
+    public static void main(String[] args) {
+        int a = 1;
+        while(Increment(a)) {
+            System.out.println(a);
+        }
+    }
+      boolean Increment(int x) {
+        if(x < 3) {
+            x++;
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
 
+A)    1 2 3
+B)    1
+      2
+      3
+C)    1 2  
+D)    1
+      2
+E)    Infinite loop
+
+F)    The code does not compile
+ANSWER   : F
 
 
 
