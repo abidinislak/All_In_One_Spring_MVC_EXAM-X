@@ -4,7 +4,7 @@ TOPIC :   Writing  main() Method
 public class Test {
      /*INSERT*/ 
      {
-         System.out.println("Hurrah! I passed...");
+         System.out.println("Hello World");
      }
 }
 
