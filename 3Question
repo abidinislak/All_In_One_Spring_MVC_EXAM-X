@@ -28,5 +28,19 @@ ANSWER  : B-F-H
 
 2 )  What is the output of the following code?
 
+public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder(100);        
+        if(sb!=null)    System.out.println(sb.length() + ":" + sb.charAt(0));
+        else System.out.println("Null");
+}
+
+A)    null:null
+B)    100:null
+C)    100:1
+D)    throw java.lang.NullPointerException
+E)    throw java.lang.StringIndexOutOfBoundsException
+
+ANSWER   : E
+
 
 
