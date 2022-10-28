@@ -1,4 +1,4 @@
-TOPIC :   Writing a main() Method
+TOPIC :   Writing  main() Method
 1 )  which options, if used to replace /*INSERT*/, will print "Hello World" on to the console? (Chosee all that apply). 
 
 public class Test {
@@ -87,5 +87,28 @@ E)    Infinite loop
 F)    The code does not compile
 ANSWER   : F
 
+
+TOPIC :  Static keyword
+
+5)   What is the output of the following code?
+public class Test {
+    private static int counter=0;
+    public static void main(String[] args) {
+        Test temppTest=new Test();
+        System.out.print(temppTest.counter);
+        counter++;
+        System.out.print(counter);
+        System.out.print(temppTest.counter);
+        temppTest.counter++;
+        System.out.print(counter);
+    }
+}
+
+
+A)    0000
+B)    0101    
+C)    0112
+D)    The code does not compile
+ANSWER   : C
 
 
