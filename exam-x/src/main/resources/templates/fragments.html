@@ -32,6 +32,19 @@
             <li class="nav-item">
               <a class="nav-link" href="javascript:void(0)">Questions</a>
             </li>
+
+            <li  class="nav-item" >
+              <a  class="nav-link"    th:href="@{/admin}"  sec:authorize="hasAuthority('admin')"   >Admin page </a>
+            </li>
+
+            <li  class="nav-item"   sec:authorize="hasAuthority('user')"      >
+
+              <a  class="nav-link" >User Page</a>
+
+            </li>
+
+
+
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="text" placeholder="Search">
