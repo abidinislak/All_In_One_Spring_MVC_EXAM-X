@@ -75,7 +75,7 @@ public class examXUserDetails implements UserDetails {
 	public String getFullName(){
 
 
-		return this.user.getName()+"...."+getPassword();
+		return ".............................";
 
 	}
 
