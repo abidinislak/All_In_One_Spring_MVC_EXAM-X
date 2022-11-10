@@ -1,72 +1,71 @@
-<div  th:fragment="head"  >
+<div th:fragment="head">
 
-  <meta charset="UTF-8">
-  <title>Wellcome to the home page</title>
+    <meta charset="UTF-8">
+    <title>Wellcome to the home page</title>
 
-  <link rel="styLesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-  <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}">	</script>
-  <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}">	</script>
-  <script type="text/javascript" th:src="@{/js/common.js}">	</script>
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
-  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <link rel="styLesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css">
+    <script th:src="@{/webjars/jquery/jquery.min.js}" type="text/javascript"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+    <script th:src="@{/js/common.js}" type="text/javascript"></script>
+    <link href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
 
 
 </div>
 
 
+<div th:fragment="navbar">
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)">EXAM-X</a>
+                <button class="navbar-toggler" data-bs-target="#mynavbar" data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/category">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Questions</a>
+                        </li>
 
-<div    th:fragment="navbar" >
-  <div class="container" >
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="javascript:void(0)">EXAM-X</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mynavbar">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/category">Category</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Questions</a>
-            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" sec:authorize="hasAuthority('admin')" th:href="@{/admin}">Admin
+                                page </a>
+                        </li>
 
-            <li  class="nav-item" >
-              <a  class="nav-link"    th:href="@{/admin}"  sec:authorize="hasAuthority('admin')"   >Admin page </a>
-            </li>
+                        <li class="nav-item" sec:authorize="hasAuthority('user')">
 
-            <li  class="nav-item"   sec:authorize="hasAuthority('user')"      >
+                            <a class="nav-link">User Page</a>
 
-              <a  class="nav-link" >User Page</a>
+                        </li>
 
-            </li>
+                        <li class="nav-item">
 
-            <li  class="nav-item"  >
+                            <a class="nav-link" sec:authentication="principal.fullName"></a>
 
-              <a  class="nav-link" sec:authentication="principal.fullName" ></a>
-
-            </li>
-<li  class="nav-item" >
-
-
-  <a  class="nav-link"  th:href="@{/jquery}"  >JQUERY </a>
-</li>
+                        </li>
+                        <li class="nav-item">
 
 
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="text" placeholder="Search">
-            <button class="btn btn-primary" type="button">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </div>
+                            <a class="nav-link" th:href="@{/jquery}">JQUERY </a>
+                        </li>
 
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" placeholder="Search" type="text">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
 
 
 </div>

@@ -17,6 +17,13 @@ public class Category {
 	private short id;
 
 
+	public Category() {
+	}
+
+	public Category(String name) {
+		this.name = name;
+	}
+
 	@Column(length = 128, nullable = false, unique = true)
 	@NotBlank(message = "Category name must not be emty")
 	private String name;

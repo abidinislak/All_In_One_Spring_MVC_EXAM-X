@@ -15,9 +15,9 @@ import java.util.List;
 public class HomeController {
 
 
-
 	@Autowired
 	CategoryService catgoryService;
+
 	@GetMapping("home")
 	public String homePage(Model model) {
 		model.addAttribute("category", new Category());
@@ -28,13 +28,15 @@ public class HomeController {
 	@GetMapping("/jquery")
 
 	public String jqueryProcess() {
-		return "jquery";
+		return "JqueryTry";
 	}
 
 	@PostMapping("/categories/check_unique")
 	@ResponseBody
 	public String jqueryPost(@Param("category") String category) {
 		System.err.println(category);
+
+		catgoryService.save(new Category(category));
 
 		return "oldu";
 	}
@@ -44,8 +46,20 @@ public class HomeController {
 	public List<Category> getAllEmployees() {
 
 
-
 		return catgoryService.findAll();
+
+
+	}
+
+	@RequestMapping(path = "/denemePurejavascript", method = RequestMethod.POST)
+	@ResponseBody
+	public String denemePurejavascript(Short sendid) {
+
+
+		catgoryService.deleteById(sendid);
+
+
+		return "oldu";
 
 
 	}

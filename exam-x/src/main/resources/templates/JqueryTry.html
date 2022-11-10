@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head th:replace="fragments :: head">
+
+</head>
+<body>
+
+
+<nav th:replace="fragments :: navbar"></nav>
+
+<div class="container">
+
+    <h1>Jquery Processs</h1>
+    <div>
+
+
+        <div class="mb-3">
+            <label class="form-label" for="category">To add Category, define a name</label>
+            <input class="form-control" id="category" type="text">
+        </div>
+        <button class="btn btn-primary" id="buttonJquery"
+                type="button">
+            Submit
+        </button>
+
+
+    </div>
+    <div class="container-fluid">
+
+
+        <h1>jquery data table</h1>
+        <table class="display" id="employeesTable">
+
+            <!-- Header Table -->
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Operations</th>
+            </tr>
+            </thead>
+            <!-- Footer Table -->
+            <tfoot>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+
+            </tr>
+            </tfoot>
+        </table>
+
+
+    </div>
+
+
+</div>
+
+</body>
+
+
+<script th:src="@{/js/jquerytest.js}" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+<!--function test (id){-->
+
+<!--alert(id);-->
+
+
+<!--   let xhr = new XMLHttpRequest();-->
+<!--   xhr.open('POST', '/denemePurejavascript', true);-->
+<!--xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');-->
+
+
+<!--xhr.send(post);-->
+
+
+<!--    }-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
