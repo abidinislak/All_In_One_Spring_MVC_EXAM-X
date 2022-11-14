@@ -2,6 +2,9 @@ package com.SpringMvc.examx;
 
 import com.SpringMvc.examx.entity.Category;
 import com.SpringMvc.examx.repository.CategoryRepository;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -15,7 +18,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
 @DataJpaTest(showSql = true)
-//@AutoConfigureTestDatabase(replace = Replace.NONE)
+@AutoConfigureTestDatabase(replace = Replace.NONE)
 //@Rollback(false)
 public class CategoryRepositoryTest
 {
@@ -34,9 +37,9 @@ public class CategoryRepositoryTest
 
 		repo.save(tempCategory);
 
-		assertThat(tempCategory.getId()).isGreaterThan((short) 0);
+		assertTrue(tempCategory!=null);
 
-
+System.err.println(tempCategory!=null);
 
 	}
 

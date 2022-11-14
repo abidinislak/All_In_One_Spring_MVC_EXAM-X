@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"    >
+<head  th:replace="fragments :: head"  >
+
+</head>
+<body>
+
+<nav   th:replace="fragments :: navbar" ></nav>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div  class="container" >
+
+    <div
+            th:if="${message != null}"
+            class="alert alert-success text center"
+    >[[${message}]]</div>
+
+<a   th:href="@{/newcategory}"  class="btn btn-primary"    > New Category</a>
+
+    <br/>
+    <br/>
+    <br/>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">parent id</th>
+            <th scope="col">process</th>
+        </tr>
+        </thead>
+        <tbody  th:each=" cat : ${cListe}">
+        <tr   >
+            <th scope="row"></th>
+            <td    th:text="${cat.name}"  ></td>
+            <td th:text="${cat.id}"  ></td>
+            <td th:text="${cat.parent}"  ></td>
+            <td   >
+
+<a   th:href="@{'/updatecategeory/edit/' + ${cat.id}}">Update</a>
+
+
+
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

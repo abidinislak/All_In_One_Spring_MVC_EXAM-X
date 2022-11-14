@@ -1,21 +1,34 @@
 package com.SpringMvc.examx.entity;
 
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "category")
-public class Category {
+@EntityListeners(AuditingEntityListener.class)
+
+public class Category extends BaseEntity {
 
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private short id;
-
+	@Column(length = 128, nullable = false, unique = true)
+	@NotBlank(message = "Category name must not be emty")
+	private String name;
+	@Column(length = 128, unique = true)
+	private String alias;
+	private boolean enabled;
+	@OneToOne
+	@JoinColumn(name = "parent_id")
+	private Category parent;
+	@OneToMany(mappedBy = "parent")
+	private Set<Category> children = new HashSet<>();
 
 	public Category() {
 	}
@@ -23,25 +36,6 @@ public class Category {
 	public Category(String name) {
 		this.name = name;
 	}
-
-	@Column(length = 128, nullable = false, unique = true)
-	@NotBlank(message = "Category name must not be emty")
-	private String name;
-
-	@Column(length = 128, unique = true)
-	private String alias;
-	private boolean enabled;
-
-	@OneToOne
-	@JoinColumn(name = "parent_id")
-	private Category parent;
-
-	@OneToMany(mappedBy = "parent")
-	private Set<Category> children = new HashSet<>();
-
-
-
-
 
 	public short getId() {
 		return id;
