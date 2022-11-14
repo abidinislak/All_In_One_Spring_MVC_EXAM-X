@@ -1,7 +1,9 @@
 package com.SpringMvc.examx.entity;
 
 
+import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.Column;
@@ -9,10 +11,19 @@ import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-public class BaseEntity {
+public abstract class BaseEntity {
 
 
-	
+	 @CreatedBy
+	  private String createdBy;
+	 
+	 
+	 @LastModifiedBy
+	 private String LastModifiedBy;
+	 
+	 
+	  @LastModifiedBy
+	  private String modifiedBy;
 	
     @Column(name = "created_date", nullable = false, updatable = false)
 	@CreatedDate
@@ -21,6 +32,9 @@ public class BaseEntity {
 
 	@LastModifiedDate
 	private LocalDateTime lastModifiedDate;
+	
+	
+	
 
 	public LocalDateTime getCreatedDate() {
 		return createdDate;
