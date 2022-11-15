@@ -1,23 +1,26 @@
 package com.SpringMvc.examx.entity;
 
 
+import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "category")
 @EntityListeners(AuditingEntityListener.class)
-
+@Audited
 public class Category extends BaseEntity {
 
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private short id;
+	private Integer id;
 	@Column(length = 128, nullable = false, unique = true)
 	@NotBlank(message = "Category name must not be emty")
 	private String name;
@@ -37,11 +40,11 @@ public class Category extends BaseEntity {
 		this.name = name;
 	}
 
-	public short getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(short id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -91,4 +94,54 @@ public class Category extends BaseEntity {
 				"name='" + name + '\'' +
 				'}';
 	}
+	
+	///
+	@Column(name = "operation")
+    private String operation;
+     
+    @Column(name = "timestamp")
+    private long timestamp;
+	
+	
+    public String getOperation() {
+		return operation;
+	}
+
+	public void setOperation(String operation) {
+		this.operation = operation;
+	}
+
+	public long getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(long timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	@PrePersist
+    public void onPrePersist() {
+        audit("INSERT");
+    }
+     
+    @PreUpdate
+    public void onPreUpdate() {
+        audit("UPDATE");
+    }
+     
+    @PreRemove
+    public void onPreRemove() {
+        audit("DELETE");
+    }
+     
+    private void audit(String operation) {
+        setOperation(operation);
+        setTimestamp((new Date()).getTime());
+    }
+	
+	
+	
+	
+	
+	
 }

@@ -1,6 +1,7 @@
 package com.SpringMvc.examx.entity;
 
 
+import org.hibernate.envers.DefaultRevisionEntity;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -13,6 +14,10 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 public abstract class BaseEntity {
 
+ 
+
+
+	@Column( nullable = false, updatable = false)
 
 	 @CreatedBy
 	  private String createdBy;

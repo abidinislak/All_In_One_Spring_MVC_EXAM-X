@@ -53,7 +53,7 @@ public class HomeController {
 
 	@RequestMapping(path = "/denemePurejavascript", method = RequestMethod.POST)
 	@ResponseBody
-	public String denemePurejavascript(Short sendid) {
+	public String denemePurejavascript(Integer sendid) {
 
 
 		catgoryService.deleteById(sendid);

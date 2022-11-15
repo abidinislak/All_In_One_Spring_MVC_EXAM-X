@@ -31,7 +31,7 @@ model.addAttribute("category",new Category());
 return "category/category_form";
 	}
 	@GetMapping("/updatecategeory/edit/{id}")
-	public String updateCategory(@PathVariable(name = "id") Short id,Model model    ){
+	public String updateCategory(@PathVariable(name = "id") Integer id,Model model    ){
 		model.addAttribute("category", service.findById(id));
 		model.addAttribute("categoryList", service.findAll());
 		return "category/category_form";

@@ -1,6 +1,5 @@
 package com.SpringMvc.examx.service;
 
-
 import com.SpringMvc.examx.entity.Category;
 import com.SpringMvc.examx.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,18 +10,15 @@ import java.util.List;
 @Service
 public class CategoryService {
 
-
 	@Autowired
 	CategoryRepository repo;
 
-
-	public void deleteById(Short id) {
-
+	public void deleteById(Integer id) {
 
 		repo.deleteById(id);
 	}
 
-	public Category findById(Short id) {
+	public Category findById(Integer id) {
 		return repo.findById(id).get();
 	}
 
@@ -30,10 +26,8 @@ public class CategoryService {
 		return repo.findAll();
 	}
 
-
 	public Category save(Category entity) {
 		return repo.save(entity);
 	}
-
 
 }
