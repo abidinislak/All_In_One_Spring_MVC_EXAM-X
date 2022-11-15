@@ -1,8 +1,3 @@
-insert into category (name,enabled) VALUES('ABC',false);
-insert into category (name,enabled) VALUES('bbb',false);
-insert into category (name,enabled) VALUES('ccc',false);
-insert into category (name,enabled) VALUES('ddd',false);
-insert into category (name,enabled) VALUES('saqweqweqwews',false);
 
 
 

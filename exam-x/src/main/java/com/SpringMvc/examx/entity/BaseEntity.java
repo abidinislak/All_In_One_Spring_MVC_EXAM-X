@@ -12,9 +12,23 @@ import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-public abstract class BaseEntity {
+public abstract class BaseEntity extends DefaultRevisionEntity {
 
- 
+	private String modifierUser;
+
+    public String getModifierUser() {
+        return modifierUser;
+    }
+
+    public void setModifierUser(String modifierUser) {
+        this.modifierUser = modifierUser;
+    }
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 
 	@Column( nullable = false, updatable = false)

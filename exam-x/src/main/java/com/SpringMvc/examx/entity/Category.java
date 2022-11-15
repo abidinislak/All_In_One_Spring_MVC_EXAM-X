@@ -2,6 +2,8 @@ package com.SpringMvc.examx.entity;
 
 
 import org.hibernate.envers.Audited;
+import org.hibernate.envers.DefaultRevisionEntity;
+import org.hibernate.envers.RevisionEntity;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -14,13 +16,13 @@ import java.util.Set;
 @Entity
 @Table(name = "category")
 @EntityListeners(AuditingEntityListener.class)
-@Audited
-public class Category extends BaseEntity {
+ @Audited
+public class Category  {
 
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private int id;
 	@Column(length = 128, nullable = false, unique = true)
 	@NotBlank(message = "Category name must not be emty")
 	private String name;
@@ -40,7 +42,7 @@ public class Category extends BaseEntity {
 		this.name = name;
 	}
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
