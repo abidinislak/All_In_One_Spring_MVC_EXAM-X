@@ -2,7 +2,7 @@
 
 $("#buttonJquery").click(function(){
 	var obj=$("#category").val();
-		alert(obj);
+		
 	url = "/categories/check_unique";
 		csrfValue = $("input[name='_csrf']").val();
 params = {
@@ -36,7 +36,6 @@ table.ajax.reload();
 
    function  test(id){
 
-alert(id);
  $.post("/denemePurejavascript",
 {
 
