@@ -4,3 +4,5 @@ taskkill /PID <PID> /F
 //// git hub
  git fsck --lost-found      //  save lifesss ... resetlediğin commitleri getirir...
 git aliis set     -->>   C:\Program Files\Git\etc\profile.d    -->>>< alias sakla='git archive -o ../asd.zip @'
+
+mysql set for delete orupdate  ->  SET SQL_SAFE_UPDATES = 0;
